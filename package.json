@@ -1,0 +1,40 @@
+{
+	"name": "ynn-plugin-redis",
+	"description": "",
+	"repository": "https://github.com/ynnjs/ynn-plugin-redis.git",
+	"version": "0.0.0",
+	"keywords": [
+		"koa",
+		"ynn",
+		"plugin",
+		"redis",
+		"ynn-redis"
+	],
+	"files": [
+		"src"
+	],
+	"main": "src/index.js",
+	"devDependencies": {
+		"jasmine": "^3.2.0",
+		"nodemon": "^1.18.4",
+		"supertest": "^3.1.0",
+		"ynn": "0.0.0"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"ioredis": "^4.0.0"
+	},
+	"scripts": {
+		"demo": "nodemon src/index.js",
+		"debug": "nodemon src/index.js --debugging=true --port=50009",
+		"test-watch": "nodemon --exec npm test",
+		"test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+		"t": "jasmine ",
+		"tw": "nodemon --exec jasmine ",
+		"test-id": "jasmine test/id.spec.js",
+		"test-jwt": "jasmine test/jwt.spec.js",
+		"test-code": "jasmine test/code.spec.js",
+		"lint": "eslint ./ --cache --ignore-path .eslintignore",
+		"precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+	}
+}
