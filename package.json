@@ -10,19 +10,16 @@
 		"redis",
 		"ynn-redis"
 	],
-	"files": [
-		"src"
-	],
 	"main": "src/index.js",
 	"devDependencies": {
-		"jasmine": "^3.2.0",
-		"nodemon": "^1.18.4",
+		"jest": "^23.6.0",
+		"nodemon": "^1.18.6",
 		"supertest": "^3.1.0",
-		"ynn": "0.0.3"
+		"ynn": "0.0.14"
 	},
 	"license": "MIT",
 	"dependencies": {
-		"ioredis": "^4.0.0"
+		"ioredis": "^4.2.0"
 	},
 	"scripts": {
 		"demo": "nodemon src/index.js",
