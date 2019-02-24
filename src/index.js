@@ -14,12 +14,12 @@ module.exports = ( app, options = {} ) => {
                 app[ REDIS ] = new Redis( config );
             }
             app[ REDIS ].on( 'error', e => {
-                app.logger.error( e );
+                app.output.error( e );
                 throw e;
             } );
 
             app[ REDIS ].on( 'connect', () => {
-                app.logger.info( '[plugin redis] connect' );
+                app.output.info( '[plugin redis] connect' );
             } );
             return app[ REDIS ];
         },
